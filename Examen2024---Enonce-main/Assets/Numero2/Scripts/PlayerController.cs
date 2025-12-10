@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
             }            
         }
 
+        
         translation = Speed * Time.deltaTime;
         transform.Translate(Vector3.forward * translation);
         animator.SetFloat(variableVitesseHash, Speed);
