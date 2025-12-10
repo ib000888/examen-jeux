@@ -54,6 +54,9 @@ public class CapsulePlayerController : NetworkBehaviour
 
     private void FixedUpdate()
     {
+        // empeche de bouger les joueurs des autres 
+        if (!IsOwner) return; 
+
         //Gestion du movement du joueur
         float xMove = Input.GetAxisRaw("Horizontal");
         float zMove = Input.GetAxisRaw("Vertical");
